@@ -7,9 +7,41 @@
 //
 
 #include <iostream>
+#include <string>
+
+using std::cout;
+using std::endl;
+
+struct Skills{
+  
+  int attack;
+  int defense;
+  int agility;
+  
+};
+
+struct Pokemon{
+  
+  char name[40];
+  int id;
+  struct Skills skill;
+
+};
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+  
+  struct Pokemon poke;
+  
+  strcpy(poke.name, "Pikachu");
+  poke.id = 15;
+  poke.skill.attack = 35;
+  poke.skill.defense = 31;
+  poke.skill.agility = 53;
+  
+  cout<<"Name: "<<poke.name<<endl;
+  cout<<"Attack: "<<poke.skill.attack<<endl;
+  cout<<"Name: "<<poke.skill.defense<<endl;
+  
+  
 }
